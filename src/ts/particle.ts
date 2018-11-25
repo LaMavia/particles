@@ -77,13 +77,13 @@ export class Particle {
     // Wall hit detection
     const hitScalar = 0.8
     if(this.pos.h + this.r > this.ctx.canvas.width ||
-      this.pos.h - this.r < 0 ) {
+      this.pos.h - this.r <= 0 ) {
         this.v.mult([-hitScalar, hitScalar])
         this.a.mult([-hitScalar, hitScalar])
       }
 
     if(this.pos.v + this.r > this.ctx.canvas.height ||
-      this.pos.v - this.r < 0 ) {
+      this.pos.v - this.r <= 0 ) {
         this.v.mult([hitScalar, -hitScalar])
         this.a.mult([hitScalar, -hitScalar])
       }
