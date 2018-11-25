@@ -1,1 +1,0 @@
-parcel ./src/index.html -p 8000
